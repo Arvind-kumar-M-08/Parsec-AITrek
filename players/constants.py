@@ -77,7 +77,7 @@ ZONE_COLORS: dict = {
 }
 
 SHRINK_VALUE: int = 10
-FINAL_SIZE = 30  # Half of the side of the final square
+FINAL_SIZE = 10  # Half of the side of the final square
 
 
 INITIAL_AGENT_HEALTH = 100
