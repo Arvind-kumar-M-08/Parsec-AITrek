@@ -21,10 +21,7 @@ In the end, only one team remains, triumphant and victorious. Their starships st
 ### Battle Arena:
 This game features a continuous 2D map with coordinates ranging from  [-200, 200] in both x and y directions. There are two teams, namely red and blue. Each team will start their game with 5 starships. The entire arena is filled with stationary, polygon-shaped asteroids of varying sizes. This map can be chosen from 3-4 pre-generated maps. 
 Your objective is to take down the enemy starships by gliding through the empty vacuum of space and shooting plasma shells at your enemy starships while avoiding asteroids in your way.
-You could make a truce and not consider attacking at all. But there is a catch! There is a dark energy vortex consuming the space around you. Your starships will continuously take damage if it crosses into the vortex. Your only chance of escape is to kill all the enemy starships before the vortex converges and kills everyone.
-Game Rules:
-When the game starts, you will be given information about all the asteroids (obstacles) in the environment. The initial position and orientation of your agents will be given. 
-
+You could make a truce and not consider attacking at all. But there is a catch! There is a dark energy vortex consuming the space around you. Your starships will continuously take damage if it crosses into the vortex. Your only chance of escape is to kill all the enemy starships before the vortex converges and kills everyone.. 
 
 
 ### Starships (Agents):
@@ -84,7 +81,10 @@ You can view documenation [here](https://github.com/Arvind-kumar-M-08/Parsec-AIT
 
 ### Running
 Edit the ```tick()``` function in players/player_red.py and players/player_blue.py
-Edit the ```tick()``` function in players/player_red.py and players/player_blue.py
+
+We have given a random bot in players/player_red.py while players/player_blue is an empty bot.
+
+YOU SHOULD NOT MODIFY ANY OTHER FUNTION OTHER THAN ```tick()```. YOU MAY WRITE NEW FUNCTIONS OR CLASSES BUT DO NOT MODIFY OTHER PRE-WRITTEN CODE.
 
 In case you are running on a windows environment, run the following command in ***git bash***. *DO NOT USE WSL*
 

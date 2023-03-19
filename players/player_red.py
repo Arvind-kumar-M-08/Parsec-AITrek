@@ -1,3 +1,5 @@
+## THIS IS A RANDOM BOT
+
 from models.State import State
 from models.Action import Action
 from models.Point import Point
@@ -28,42 +30,45 @@ import sys
 
 
 def tick(state: State) -> List[Action]:
+
     actions = []
-    for agent_id in state.agents:
-        flag = 0
+    for agent_id in state.agents: 
+        flag = 0 # flag to check if we have given an action
         agent = state.agents[agent_id]
 
         for alert in state.alerts:
-            if alert.alert_type == COLLISION:
+            if alert.alert_type == COLLISION: # if collision with wall, update to opposite direction
                 type = UPDATE_DIRECTION
                 direction = Point(agent.get_direction().x,
                                   agent.get_direction().y) + Point(random.uniform(-3, 3), random.uniform(-3, 3))
 
-                action = Action(agent_id, type, direction)
+                action = Action(agent_id, type, direction) # create action
                 flag = 1
                 break
 
         if flag == 0:
             rand_val = random.uniform(0, 1)
             # print(rand_val)
-            if rand_val < 0.3:
+            if rand_val < 0.3: # 30% chance to update view direction
                 type = UPDATE_VIEW_DIRECTION
                 current_direction = agent.get_view_direction()
                 direction = current_direction + \
-                            Point(random.uniform(-1, 1), random.uniform(-1, 1))
-            elif rand_val < 0.8:
+                    Point(random.uniform(-1, 1), random.uniform(-1, 1))
+            elif rand_val < 0.8: # 50% chance to update direction
                 type = UPDATE_DIRECTION
                 current_direction = agent.get_direction()
                 direction = current_direction + \
-                            Point(random.uniform(-1, 1), random.uniform(-1, 1))
-            else:
+                    Point(random.uniform(-1, 1), random.uniform(-1, 1))
+            else: # 20% chance to fire
                 type = FIRE
                 direction = Point(random.uniform(-1, 1), random.uniform(-1, 1))
 
         action = Action(agent_id, type, direction)
         actions.append(action)
 
+    # return the actions of all the agents
     return actions
+
 
 
 if __name__ == '__main__':
