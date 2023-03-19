@@ -100,5 +100,5 @@ Note:
 
 
 ## WhatsApp Link for Support <a name="whatsapp"></a>
-[WhatsApp Invite Link](https://chat.whatsapp.com/E8JfBWU0YWEFvdku345XLw)
+[WhatsApp Invite Link](https://chat.whatsapp.com/DsYG1kWW1FS7VwtMsSHKMo)
 
