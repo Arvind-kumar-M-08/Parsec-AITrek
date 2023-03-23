@@ -66,8 +66,7 @@ class Environment:
         self._zone = [Point(MAX_X, MAX_Y), Point(
             MAX_X, MIN_Y), Point(MIN_X, MIN_Y), Point(MIN_X, MAX_Y)]
         self.set_new_safe_zone()
-        self._zone_shrink_times = [
-            x * 5 for x in [1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 5000]]
+        self._zone_shrink_times = [1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 5000]
         self.n_invalid_actions = {
             "red": 0,
             "blue": 0
